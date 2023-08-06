@@ -3,13 +3,14 @@ import { ReactNode } from "react"
 
 interface CardTecnologesProps {
   name: string
-  tecnologeIcon: ReactNode    
+  tecnologeIcon: ReactNode
+  isBlack?: boolean    
 }
-export function CardTecnologes({tecnologeIcon, name}: CardTecnologesProps) {
+export function CardTecnologes({tecnologeIcon, name, isBlack = false}: CardTecnologesProps) {
   return (
-    <Container>
+    <Container isBlack={isBlack}>
       {tecnologeIcon}
-      <strong>{name}</strong>
+      <strong>{name.toUpperCase()}</strong>
     </Container>
   )
 }

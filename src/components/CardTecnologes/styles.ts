@@ -1,7 +1,7 @@
 import { styled } from "@/styles";
 
 export const Container = styled('div', {
-  background: '$121214',
+  background: '#121214',
   color: '$gray200',
   display: 'flex',
   alignItems: 'center',
@@ -9,4 +9,13 @@ export const Container = styled('div', {
   padding: '$4 0.625rem',
   gap: '$4',
   border: '1px solid #121214',
+  borderRadius: '$md',
+
+  variants: {
+    isBlack: {
+      false: {
+        background: 'transparent',
+      }
+    }
+  }
 })

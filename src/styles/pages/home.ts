@@ -71,16 +71,21 @@ export const MainContent = styled('main', {
 
 export const Hero = styled('div', {
   display: 'grid',
-  gridTemplateColumns: ' 0.4fr 1fr',
+  gridTemplateColumns: '200px 1fr 127px',
   width: '100%',
 })
 
 export const Datails = styled('div', {
   gridColumnStart: '2',
-  display: 'flex',
-  alignItems: 'flex-start',
-  justifyContent: 'space-between',
-  paddingRight: '120px',
+  margin: '0 auto',
+  width: '100%',
+  maxWidth: 900,
+
+  section:{
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+  },
 
   nav: {
     display: 'flex',
@@ -156,13 +161,13 @@ export const AboutMe = styled('section', {
 
   h2: {
     color: '$green400',
-    fontSize: '3.75rem',
+    fontSize: '2.5rem',
   },
 
   p: {
     color: '$gray300',
     lineHeight: '$base',
-    fontSize: '$2xl',
+    fontSize: '$md',
     textAlign: 'center',
 
     span: {
@@ -170,6 +175,72 @@ export const AboutMe = styled('section', {
       fontWeight: '$bold',
     },
   }
+})
+
+export const WeWorks = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+  gap: '$8',
+  textAlign: 'center',
+  width: '100%',
+  maxWidth: 1080,
+  margin: '0 auto',
+
+  h2: {
+    color: '$green400',
+    fontSize: '2.5rem',
+  },
+
+  p: {
+    color: '$gray300',
+    lineHeight: '$base',
+    fontSize: '$md',
+    textAlign: 'center',
+  },
+
+  div:{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+    padding: '0 2rem',
+
+    img: {
+      objectFit: 'cover',
+      borderRadius: '$md'
+    }
+  }
+})
+
+export const Tecnologes = styled('article', {
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+  gap: '$8',
+  textAlign: 'center',
+  width: '100%',
+  maxWidth: 1080,
+  margin: '0 auto',
+
+  h2: {
+    color: '$gray200',
+    fontSize: '2.5rem',
+  },
+
+  p: {
+    color: '$gray300',
+    lineHeight: '$base',
+    fontSize: '$md',
+    textAlign: 'center',
+  },
+})
+
+export const GradientTecnologs = styled('div', {
+  width: '100%',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(4, 1fr)',
+  gap: '$5',
 })
 
 export const TextError = styled('p', {
