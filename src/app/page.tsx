@@ -1,95 +1,76 @@
+'use client'
+import { Container, Header, MainContent, Hero, InforOwners, Datails, Avatars, Title, Progress, AboutMe } from '@/styles/pages/home'
+import { Airplay, GithubLogo, ChatCircleText, LinkSimpleHorizontal, TwitterLogo, LinkedinLogo } from '@phosphor-icons/react'
+import Link from 'next/link'
+import { User } from '@/components/User'
 import Image from 'next/image'
-import styles from './page.module.css'
+
+import progressImage from '../assets/progressPC.png'
 
 export default function Home() {
+  const users = [
+    {
+      name: 'Carlos',
+      cod: 'CE',
+      url: '../../assets/carlos.png'
+    },
+    {
+      name: 'Romulo',
+      cod: 'RE',
+      url: '../../assets/romulo.png'
+    },
+    {
+      name: 'Pedro',
+      cod: 'PH',
+      url: '../../assets/pedro.png'
+    }
+  ]
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+    <Container>
+      <Header>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h1>Pérgamo <Airplay size={32} weight='bold' /></h1>
+          <button type='button'>Entrar em contato <ChatCircleText size={24} weight='bold' /></button>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+      </Header>
+      <MainContent>
+        <Hero>
+          <Datails>
+            <InforOwners>
+              <Title>
+                <h1>Freelancers e Desenvolvimento <span>Web</span></h1>
+                <p>Empresa voltada para o desenvolvimento de soluçãoes WEB e acompanhamento empresarial</p>
+              </Title>
+              <Avatars>
+                {users.map(user => {
+                  return <User name={user.name}  url={user.url}  cod={user.cod}  key={user.name} />
+                })}
+              </Avatars>
+            </InforOwners>
+            <nav>
+              <Link href='https://github.com' target='_blank'><LinkSimpleHorizontal size={32} weight="bold" /></Link>
+              <Link href='https://github.com' target='_blank'><TwitterLogo size={32} weight="bold" /></Link>
+              <Link href='https://github.com' target='_blank'><LinkedinLogo size={32} weight="bold" /></Link>
+              <Link href='https://github.com' target='_blank'><GithubLogo size={32} weight="bold" /></Link>
+            </nav>
+          </Datails>
+        </Hero>
+        <Progress>
+          <Image src={progressImage} alt='Progresso em tecnologia' width={426} height={288} />
+        </Progress>
+        <AboutMe>
+          <h2>Pérgamo</h2>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Somos uma empresa focada em criar e disponibilizar sistemas interativos com foco no usuário e funcionalidades. Nascemos como um complemento entre amigos e sócios para
+            proporcionar uma gama de conhecimentos amplos e uma estrutura sólida para o
+            desenvolvimento. <span>clique para saber mais sobre nós.</span>
+            <br />
+            Nós da Pérgamo estamos voltados para aplicações com as mais diversas tecnologias que foquem no desempenho e funcionalidade buscada. A transparência do serviço, qualidade e a ética são nossos principais pilares.
+            <br />
+            Somos <span>apaixonados</span> por tecnologia, e por isso seu futuro está seguro em nossas mãos!
           </p>
-        </a>
-      </div>
-    </main>
+        </AboutMe>
+      </MainContent>
+    </Container>
   )
 }
