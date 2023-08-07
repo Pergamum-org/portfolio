@@ -213,6 +213,33 @@ export const WeWorks = styled('div', {
   }
 })
 
+export const Projects = styled('section', {
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
+  gap: '$8',
+
+  h2:{
+    color: '$green400',
+    fontSize: '2.5rem',
+  },
+
+  div: {
+    width: '100%',
+    maxWidth: 1080,
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    justifyContent: 'center',
+    gap: '$8',
+
+    img: {
+      objectFit: 'cover',
+      borderRadius: '$md',
+      margin: 'auto',
+    }
+  }
+})
+
 export const Tecnologes = styled('article', {
   display: 'flex',
   alignItems: 'center',

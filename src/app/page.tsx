@@ -12,7 +12,8 @@ import {
   AboutMe,
   WeWorks,
   Tecnologes,
-  GradientTecnologs
+  GradientTecnologs,
+  Projects
 } from '@/styles/pages/home'
 import { Airplay, GithubLogo, ChatCircleText, LinkSimpleHorizontal, TwitterLogo, LinkedinLogo } from '@phosphor-icons/react'
 import Link from 'next/link'
@@ -22,7 +23,12 @@ import Image from 'next/image'
 import progressImage from '../assets/progressPC.png'
 import dataBaseSQL from '../assets/Database.png'
 import virtualCrash from '../assets/virtualCrash.png'
+import agenda from '../assets/AgendamentoDescomplicado.gif'
+import crud from '../assets/CRUD.gif'
+import loginVendedor from '../assets/LoginVendedor.gif'
+import shoppingImage from '../assets/AnimationNextIgnite.gif'
 import { CardTecnologes } from '@/components/CardTecnologes'
+import { getTecs } from '@/utils/getTecs'
 
 export default function Home() {
   const users = [
@@ -42,48 +48,7 @@ export default function Home() {
       url: 'https://i.ibb.co/KGNrd8x/Rectangle-1.png'
     }
   ]
-  const tecs = [
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-    {
-      name: 'react',
-      icon: <GithubLogo size={32} weight='bold' />,
-    },
-  ]
+  const tecs = getTecs()
   return (
     <Container>
       <Header>
@@ -141,6 +106,27 @@ export default function Home() {
             <Image src={dataBaseSQL} width={314} alt='SQL database' />
           </div>
         </WeWorks>
+        <Projects>
+          <h2>Projetos</h2>
+          <section>
+            <div>
+              <span />
+              <Image src={agenda} width={470} height={290} alt='projeto de'/>
+            </div>
+            <div>
+              <span />
+              <Image src={crud} width={470} height={290} alt='projeto de'/>
+            </div>
+            <div>
+              <span />
+              <Image src={loginVendedor} width={470} height={290} alt='projeto de'/>
+            </div>
+            <div>
+              <span />
+              <Image src={shoppingImage} width={470} height={290} alt='projeto de'/>
+            </div>
+          </section>
+        </Projects>
         <Tecnologes>
           <h2>Tecnologias</h2>
           <p>Temos experiências com as seguintes tecnologias em nossos projetos e trabalhos anteriores:</p>
