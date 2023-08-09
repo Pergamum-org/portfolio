@@ -23,29 +23,30 @@ import Image from 'next/image'
 import progressImage from '../assets/progressPC.png'
 import dataBaseSQL from '../assets/Database.png'
 import virtualCrash from '../assets/virtualCrash.png'
-import agenda from '../assets/AgendamentoDescomplicado.gif'
-import crud from '../assets/CRUD.gif'
-import loginVendedor from '../assets/LoginVendedor.gif'
-import shoppingImage from '../assets/AnimationNextIgnite.gif'
 import { CardTecnologes } from '@/components/CardTecnologes'
 import { getTecs } from '@/utils/getTecs'
+import { GridProjects } from '@/components/GridProjects'
 
 export default function Home() {
   const users = [
     {
       name: 'Carlos',
       cod: 'CE',
-      url: 'https://i.ibb.co/6PY0B0X/Rectangle.png'
+      url: 'https://i.ibb.co/6PY0B0X/Rectangle.png',
+      linkedin: 'https://www.linkedin.com/in/carlos-eduardo-de-almeida-43317b23a/'
     },
     {
       name: 'Romulo',
       cod: 'RE',
-      url: 'https://i.ibb.co/TbJFLrx/Rectangle-2.png'
+      url: 'https://i.ibb.co/TbJFLrx/Rectangle-2.png',
+      linkedin: 'https://www.linkedin.com/in/romulo-pinheiro-206b3723a/'
+
     },
     {
       name: 'Pedro',
       cod: 'PH',
-      url: 'https://i.ibb.co/KGNrd8x/Rectangle-1.png'
+      url: 'https://i.ibb.co/KGNrd8x/Rectangle-1.png',
+      linkedin: 'https://www.linkedin.com/in/pedro-lima-2ab9831b0/'
     }
   ]
   const tecs = getTecs()
@@ -68,7 +69,7 @@ export default function Home() {
                 </Title>
                 <Avatars>
                   {users.map(user => {
-                    return <User name={user.name}  url={user.url}  cod={user.cod}  key={user.name} />
+                    return <User name={user.name}  url={user.url}  cod={user.cod} linkedin={user.linkedin}  key={user.name} />
                   })}
                 </Avatars>
               </InforOwners>
@@ -108,24 +109,7 @@ export default function Home() {
         </WeWorks>
         <Projects>
           <h2>Projetos</h2>
-          <section>
-            <div>
-              <span />
-              <Image src={agenda} width={470} height={290} alt='projeto de'/>
-            </div>
-            <div>
-              <span />
-              <Image src={crud} width={470} height={290} alt='projeto de'/>
-            </div>
-            <div>
-              <span />
-              <Image src={loginVendedor} width={470} height={290} alt='projeto de'/>
-            </div>
-            <div>
-              <span />
-              <Image src={shoppingImage} width={470} height={290} alt='projeto de'/>
-            </div>
-          </section>
+          <GridProjects />
         </Projects>
         <Tecnologes>
           <h2>Tecnologias</h2>

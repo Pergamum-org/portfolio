@@ -23,6 +23,11 @@ export const AvatarImage = styled(Avatar.Image, {
   height: '100%',
   objectFit: 'cover',
   borderRadius: 'inherit',
+  transition: 'transform 0.2s',
+
+  '&:hover':{
+    transform: 'scale(1.2)',
+  }
 })
 
 export const AvatarFallback = styled(Avatar.Fallback, {

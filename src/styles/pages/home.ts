@@ -64,6 +64,7 @@ export const MainContent = styled('main', {
   margin: '4rem auto',
   background: '$gray650',
   padding: '4rem 0',
+  borderRadius: '$md',
   display:'flex',
   flexDirection: 'column',
   gap: '4rem'
@@ -79,7 +80,7 @@ export const Datails = styled('div', {
   gridColumnStart: '2',
   margin: '0 auto',
   width: '100%',
-  maxWidth: 900,
+  maxWidth: 1000,
 
   section:{
     display: 'flex',
@@ -223,21 +224,6 @@ export const Projects = styled('section', {
     color: '$green400',
     fontSize: '2.5rem',
   },
-
-  div: {
-    width: '100%',
-    maxWidth: 1080,
-    display: 'grid',
-    gridTemplateColumns: 'repeat(2, 1fr)',
-    justifyContent: 'center',
-    gap: '$8',
-
-    img: {
-      objectFit: 'cover',
-      borderRadius: '$md',
-      margin: 'auto',
-    }
-  }
 })
 
 export const Tecnologes = styled('article', {
