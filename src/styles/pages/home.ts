@@ -31,30 +31,6 @@ export const Header = styled('header', {
         color: '#d9d9d9'
       }
     },
-
-    button: {
-      fontSize: '$sm',
-      color: '$gray200',
-      fontWeight: '$bold',
-
-      display: 'flex',
-      alignItems: 'center',
-      gap: '$2',
-      padding: '$3 $2',
-      background: '$gray900',
-
-      border: '1px solid $gray900',
-      borderRadius: '$sm',
-      cursor: 'pointer',
-
-      outline: 'none',
-      transition: 'background-color 0.2s',
-
-      '&:not(:disabled):hover, &:not(:disabled):focus':{
-        border: '1px solid $gray300',
-        background: '$gray950',
-      }
-    }
   }
 })
 

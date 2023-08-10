@@ -26,6 +26,7 @@ import virtualCrash from '../assets/virtualCrash.png'
 import { CardTecnologes } from '@/components/CardTecnologes'
 import { getTecs } from '@/utils/getTecs'
 import { GridProjects } from '@/components/GridProjects'
+import { Contact } from '@/components/Contact'
 
 export default function Home() {
   const users = [
@@ -55,7 +56,7 @@ export default function Home() {
       <Header>
         <div>
           <h1>Pérgamo <Airplay size={32} weight='bold' /></h1>
-          <button type='button'>Entrar em contato <ChatCircleText size={24} weight='bold' /></button>
+          <Contact />
         </div>
       </Header>
       <MainContent>
