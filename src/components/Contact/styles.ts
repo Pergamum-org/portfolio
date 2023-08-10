@@ -3,6 +3,10 @@ import * as Dialog from '@radix-ui/react-dialog';
 
 
 export const Trigger  = styled(Dialog.Trigger, {
+  background: 'transparent',
+  border: 'none',
+  borderRadius: '$sm',
+
   button: {
     fontSize: '$sm',
     color: '$gray200',
@@ -38,7 +42,7 @@ export const Content  = styled(Dialog.Content, {
   position: 'fixed',
   top: '50%',
   left: '50%',
-  transform: 'translate(50%, 50%)',
+  transform: 'translate(-50%, -50%)',
   maxWidth: 1080,
   width: '80vw',
   padding: '2rem 4rem',
