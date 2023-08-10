@@ -19,45 +19,45 @@ export function GridProjects(){
     <Container>
             <div>
               <span>
-                <SiTypescript size={24} weight='bold' />
-                <FaReact size={24} weight='bold' />
-                <TbBrandNextjs size={24} weight='bold' />
-                <SiPrisma size={24} weight='bold' />
-                <SiStorybook size={24} weight='bold' />
-                <SiMysql size={24} weight='bold' />
-                <RxStitchesLogo size={24} weight='bold' />                
+                <SiTypescript size={28} weight='bold' />
+                <FaReact size={28} weight='bold' />
+                <TbBrandNextjs size={28} weight='bold' />
+                <SiPrisma size={28} weight='bold' />
+                <SiStorybook size={28} weight='bold' />
+                <SiMysql size={28} weight='bold' />
+                <RxStitchesLogo size={28} weight='bold' />                
               </span>
               <Image src={agenda} width={470} height={290} alt='projeto de agendamento de horarios em volta de afazeres principais'/>
             </div>
             <div>
               <span>
-                <AiFillHtml5 size={24} weight='bold' />
-                <BiLogoCss3 size={24} weight='bold' />
-                <FaNodeJs size={24} weight='bold' />
-                <IoLogoJavascript size={24} weight='bold' />
-                <BiLogoPostgresql size={24} weight='bold' />
+                <AiFillHtml5 size={28} weight='bold' />
+                <BiLogoCss3 size={28} weight='bold' />
+                <FaNodeJs size={28} weight='bold' />
+                <IoLogoJavascript size={28} weight='bold' />
+                <BiLogoPostgresql size={28} weight='bold' />
               </span>
               <Image src={crud} width={470} height={290} alt='Crud de aplicação para usuarios'/>
             </div>
             <div>
             <span>
-                <IoLogoJavascript size={24} weight='bold' />
-                <FaBootstrap size={24} weight='bold' />
-                <AiFillHtml5 size={24} weight='bold' />
-                <BiLogoCss3 size={24} weight='bold' />
-                <TbSql size={24} weight='bold' />
-                <FaPhp size={24} weight='bold' />
+                <IoLogoJavascript size={28} weight='bold' />
+                <FaBootstrap size={28} weight='bold' />
+                <AiFillHtml5 size={28} weight='bold' />
+                <BiLogoCss3 size={28} weight='bold' />
+                <TbSql size={28} weight='bold' />
+                <FaPhp size={28} weight='bold' />
               </span>
               <Image src={loginVendedor} width={470} height={290} alt='projeto de simulação de cadastro e venda de produtos'/>
             </div>
             <div>
             <span>
-                <SiTypescript size={24} weight='bold' />
-                <FaReact size={24} weight='bold' />
-                <TbBrandNextjs size={24} weight='bold' />
-                <SiPrisma size={24} weight='bold' />
-                <TbSql size={24} weight='bold' />
-                <RxStitchesLogo size={24} weight='bold' />                
+                <SiTypescript size={28} weight='bold' />
+                <FaReact size={28} weight='bold' />
+                <TbBrandNextjs size={28} weight='bold' />
+                <SiPrisma size={28} weight='bold' />
+                <TbSql size={28} weight='bold' />
+                <RxStitchesLogo size={28} weight='bold' />                
               </span>
               <Image src={shoppingImage} width={470} height={290} alt='projeto de vendas vinculado ao stripe'/>
             </div>

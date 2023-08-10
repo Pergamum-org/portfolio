@@ -72,7 +72,7 @@ export const MainContent = styled('main', {
 
 export const Hero = styled('div', {
   display: 'grid',
-  gridTemplateColumns: '200px 1fr 127px',
+  gridTemplateColumns: '200px 1fr',
   width: '100%',
 })
 

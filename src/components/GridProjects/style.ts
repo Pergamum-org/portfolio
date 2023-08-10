@@ -24,8 +24,8 @@ export const Container = styled('section', {
 
         svg:{
           background: '$gray100',
-          width: 28,
-          height: 28,
+          width: 32,
+          height: 32,
           padding: '$1',
           borderRadius: 999,
           color: '#000'
