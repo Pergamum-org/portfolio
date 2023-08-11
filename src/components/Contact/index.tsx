@@ -1,9 +1,37 @@
 'use client'
-import { ChatCircleText } from "@phosphor-icons/react";
-import { Content, Overlay, Trigger } from "./styles";
+import { ChatCenteredText, ChatCircleText, WhatsappLogo, X } from "@phosphor-icons/react";
+import { Close, Content, Overlay, Trigger, Navgation, Title, Hero, MainContent } from "./styles";
 import * as Dialog from '@radix-ui/react-dialog';
+import { useState } from "react";
+import Image from "next/image";
+import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+
+import whatsapp from '../../assets/whatsapp.png'
+import contact from '../../assets/contact.png'
+
+interface ContactProps {
+  name: string
+  email?: string
+}
 
 export function Contact(){
+  const [sendMenssage, setSendMessage] = useState<'whatsapp' | 'email'>('whatsapp')
+  const { register, handleSubmit } = useForm<ContactProps>()
+  const router = useRouter()
+
+  function handleModifyModeSend(send: 'whatsapp' | 'email') {
+    setSendMessage(_ => send)
+  }
+
+  function handleContactUs(data: ContactProps){
+    if(sendMenssage === 'whatsapp'){
+      // redirecinar para wtss
+      router.push(`https://api.whatsapp.com/send?phone=5575988868391&text=Olá, Pérgamo! Me chamo ${data.name}, gostaria de entrar em contato`)
+    } else {
+      // redirecinar para email
+    }
+  }
   return(
     <Dialog.Root>
       <Trigger>
@@ -12,6 +40,39 @@ export function Contact(){
       <Dialog.Portal>
         <Overlay />
         <Content>
+          <Hero>
+            <Close>
+              <button type='button'><X size={24} weight='bold' /> </button>
+            </Close>
+
+            <Navgation>
+              <Title onClick={() => handleModifyModeSend('whatsapp')} select={sendMenssage === 'whatsapp'}>Whatsapp</Title>
+              <Title onClick={() => handleModifyModeSend('email')} select={sendMenssage === 'email'} >E-mail</Title>
+            </Navgation>
+          </Hero>
+
+          <MainContent>
+            <div>
+            {sendMenssage == 'whatsapp' ? <Image width={400} src={whatsapp} alt=''/> : <Image width={400} src={contact} alt=''/>}
+              
+            </div>
+            <form onSubmit={handleSubmit(handleContactUs)} >
+              <label>
+                Nome:
+                <input required {...register('name')}/>
+              </label>
+              {
+                sendMenssage !== 'whatsapp' && (
+                  <label>
+                    E-mail:
+                    <input type='email' required {...register('email')}/>
+                  </label>
+                )
+              }
+
+              <button type='button'> Entrar em contato {sendMenssage === 'whatsapp'? <WhatsappLogo weight="bold" size={32} /> : <ChatCenteredText size={32} weight="bold" />}  </button>
+            </form>
+          </MainContent>
         </Content>
       </Dialog.Portal>
     </Dialog.Root>
