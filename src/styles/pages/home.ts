@@ -36,7 +36,7 @@ export const Header = styled('header', {
 
 export const MainContent = styled('main', {
   width: '100%',
-  maxWidth: 'calc(100vw - 120px)',
+  maxWidth: '94vw)',
   margin: '4rem auto',
   background: '$gray650',
   padding: '4rem 0',

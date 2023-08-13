@@ -3,11 +3,6 @@ import * as Dialog from '@radix-ui/react-dialog';
 
 
 export const Trigger  = styled(Dialog.Trigger, {
-  background: 'transparent',
-  border: 'none',
-  borderRadius: '$sm',
-
-  button: {
     fontSize: '$sm',
     color: '$gray200',
     fontWeight: '$bold',
@@ -29,7 +24,6 @@ export const Trigger  = styled(Dialog.Trigger, {
       border: '1px solid $gray300',
       background: '$gray950',
     }
-  }
 })
 
 export const Overlay  = styled(Dialog.Overlay, {
@@ -67,21 +61,11 @@ export const Close  = styled(Dialog.Close, {
   outline: 'none',
   border: 'none',
   height: 40,
-
-  button: {
-    cursor: 'pointer',
-    justifyContent: 'center',
-    alignItems: 'center',
-    display: 'flex',
-    border: 'none',
-    outline: 'none',
-    color: '#000',
-    background: 'transparent',
-    transition: 'color 0.2s',
-
-    '&:hover':{
-      color: '#A80000',
-    }
+  cursor: 'pointer',
+  color: '#000',
+  transition: 'color 0.2s',
+  '&:hover':{
+    color: '#A80000',
   }
 })
 
@@ -119,10 +103,11 @@ export const MainContent = styled('div', {
         borderRadius: '$sm',
         color: '#000',
         padding: '$2',
-        outeline: 'none',
+        outline: 'none',
 
         '&::placeholder': {
-          color: '$gray600'
+          color: '$gray600',
+          opacity: 0.7,
         }
       }
     },
@@ -139,10 +124,15 @@ export const MainContent = styled('div', {
       borderRadius: '$md',
       background: '$green400',
       transition: 'background-color 0.2s',
-      outeline: 'none',
+      outline: 'none',
       fontSize: '$2xl',
       fontWeight: 'bold',
       padding: '$3',
+
+      '&:hover': {
+        background: '$green500',
+        border: '1px solid $green200'
+      }
     }
   }
 })

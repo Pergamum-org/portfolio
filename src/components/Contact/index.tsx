@@ -24,25 +24,25 @@ export function Contact(){
     setSendMessage(_ => send)
   }
 
-  function handleContactUs(data: ContactProps){
+  async function handleContactUs(data: ContactProps){
     if(sendMenssage === 'whatsapp'){
       // redirecinar para wtss
-      router.push(`https://api.whatsapp.com/send?phone=5575988868391&text=Olá, Pérgamo! Me chamo ${data.name}, gostaria de entrar em contato`)
+      await router.replace(`https://api.whatsapp.com/send?phone=5575988868391&text=Olá, Pérgamo! Me chamo ${data.name}, gostaria de entrar em contato`)
     } else {
       // redirecinar para email
     }
   }
   return(
     <Dialog.Root>
-      <Trigger>
-        <button type='button'>Entrar em contato <ChatCircleText size={24} weight='bold' /></button>
+      <Trigger type='button'>
+        Entrar em contato <ChatCircleText size={24} weight='bold' />
       </Trigger>
       <Dialog.Portal>
         <Overlay />
         <Content>
           <Hero>
-            <Close>
-              <button type='button'><X size={24} weight='bold' /> </button>
+            <Close type='button'>
+              <X size={24} weight='bold' />
             </Close>
 
             <Navgation>
@@ -59,18 +59,18 @@ export function Contact(){
             <form onSubmit={handleSubmit(handleContactUs)} >
               <label>
                 Nome:
-                <input required {...register('name')}/>
+                <input required {...register('name')} placeholder='Jone Doe'/>
               </label>
               {
                 sendMenssage !== 'whatsapp' && (
                   <label>
                     E-mail:
-                    <input type='email' required {...register('email')}/>
+                    <input type='email' required {...register('email')} placeholder='Jonedoe@gmail.com'/>
                   </label>
                 )
               }
 
-              <button type='button'> Entrar em contato {sendMenssage === 'whatsapp'? <WhatsappLogo weight="bold" size={32} /> : <ChatCenteredText size={32} weight="bold" />}  </button>
+              <button type='submit'> Entrar em contato {sendMenssage === 'whatsapp'? <WhatsappLogo weight="bold" size={32} /> : <ChatCenteredText size={32} weight="bold" />}  </button>
             </form>
           </MainContent>
         </Content>
