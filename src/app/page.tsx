@@ -15,7 +15,7 @@ import {
   GradientTecnologs,
   Projects
 } from '@/styles/pages/home'
-import { Airplay, GithubLogo, ChatCircleText, LinkSimpleHorizontal, TwitterLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { Airplay, GithubLogo, LinkSimpleHorizontal, TwitterLogo, LinkedinLogo } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { User } from '@/components/User'
 import Image from 'next/image'
@@ -27,29 +27,10 @@ import { CardTecnologes } from '@/components/CardTecnologes'
 import { getTecs } from '@/utils/getTecs'
 import { GridProjects } from '@/components/GridProjects'
 import { Contact } from '@/components/Contact'
+import { getUsers } from '@/utils/getUsers'
 
 export default function Home() {
-  const users = [
-    {
-      name: 'Carlos',
-      cod: 'CE',
-      url: 'https://i.ibb.co/6PY0B0X/Rectangle.png',
-      linkedin: 'https://www.linkedin.com/in/carlos-eduardo-de-almeida-43317b23a/'
-    },
-    {
-      name: 'Romulo',
-      cod: 'RE',
-      url: 'https://i.ibb.co/TbJFLrx/Rectangle-2.png',
-      linkedin: 'https://www.linkedin.com/in/romulo-pinheiro-206b3723a/'
-
-    },
-    {
-      name: 'Pedro',
-      cod: 'PH',
-      url: 'https://i.ibb.co/KGNrd8x/Rectangle-1.png',
-      linkedin: 'https://www.linkedin.com/in/pedro-lima-2ab9831b0/'
-    }
-  ]
+  const users = getUsers()
   const tecs = getTecs()
   return (
     <Container>

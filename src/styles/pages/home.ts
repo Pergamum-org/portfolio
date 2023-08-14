@@ -31,6 +31,14 @@ export const Header = styled('header', {
         color: '#d9d9d9'
       }
     },
+  },
+
+  "@media (max-width: 800px)": {
+    gridTemplateColumns: '1fr',
+
+    div: {
+      gridColumnStart: '1',
+    }
   }
 })
 
@@ -56,7 +64,7 @@ export const Hero = styled('div', {
   gridTemplateColumns: '200px 1fr',
   width: '100%',
 
-  "@media (max-width: 800px)": {
+  "@media (max-width: 1000px)": {
     gridTemplateColumns: '1fr',
   }
 })
@@ -71,6 +79,11 @@ export const Datails = styled('div', {
     display: 'flex',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
+
+    "@media (max-width: 800px)": {
+      flexDirection: 'column',
+      gap: "2rem",
+    }
   },
 
   nav: {
@@ -93,6 +106,12 @@ export const Datails = styled('div', {
       '&:hover, &:focus':{
         color: '$green700'
       }
+    },
+
+    "@media (max-width: 800px)": {
+      flexDirection: 'row', 
+      justifyContent: 'space-around',
+      width: '100%',
     }
   },
 
@@ -131,13 +150,14 @@ export const Avatars = styled('div', {
 })
 
 export const Progress = styled('div', {
-  width: 426,
-  height: 288,
+  maxWidth: 426,
+  maxHeight: 288,
   margin: '0 auto',
 
   img: {
     objectFit: 'cover',
-
+    width: '100%',
+    height: '100%',
   }
 })
 
@@ -199,6 +219,11 @@ export const WeWorks = styled('div', {
     img: {
       objectFit: 'cover',
       borderRadius: '$md'
+    },
+    
+    "@media (max-width: 800px)": {
+      flexDirection: 'column',
+      gap: "1rem",
     }
   }
 })

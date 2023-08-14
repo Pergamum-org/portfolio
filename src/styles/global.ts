@@ -17,6 +17,9 @@ export const stylesGlobalCss = globalCss({
     fontFamily: '$default',
     fontSize: '1rem',
     color: '$gray200',
-    lineHeight: '$base',
+
+    "@media (max-width: 800px)": {
+      fontSize: '86.75%',
+    }
   },
 })

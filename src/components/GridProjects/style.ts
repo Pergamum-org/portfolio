@@ -12,13 +12,12 @@ export const Container = styled('section', {
       display: 'flex',
       justifyContent: 'center',
       position: 'relative',
-      width: '100%',
-      maxWidth: 470,
 
       span:{
         position: 'absolute',
         width: 0,
-        height: 290,
+        maxHeight: 290,
+        height: "100%",
         background: 'rgba(0,0,0,0.25)',
         top: 0,
         borderRadius: '$md',
@@ -53,11 +52,15 @@ export const Container = styled('section', {
       div: {
         width: '100%',
         maxWidth: 470,
-
+        height: "100%",
+        maxHeight: 290,
+        
         img: {
           objectFit: 'contain',
           borderRadius: '$md',
           margin: 'auto',
+          height: "100%",
+          width: '100%',
         },
       }
     },

@@ -44,7 +44,7 @@ export function GridProjects(){
               </div>
             </div>
             <div>
-            <span>
+              <span>
                 <IoLogoJavascript size={28} weight='bold' />
                 <FaBootstrap size={28} weight='bold' />
                 <AiFillHtml5 size={28} weight='bold' />
