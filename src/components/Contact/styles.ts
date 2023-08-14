@@ -72,7 +72,7 @@ export const Close  = styled(Dialog.Close, {
 export const Navgation = styled('div', {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   width: '100%',
   maxWidth: 400
 })
@@ -83,6 +83,16 @@ export const MainContent = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   marginTop: '2rem',
+
+  div: {
+    width: '100%',
+    maxWidth: 400,
+
+    img: {
+      width: '100%',
+      objectFit: 'contain'
+    }
+  },
 
   form: {
     display: 'flex',

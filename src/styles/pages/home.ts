@@ -36,20 +36,29 @@ export const Header = styled('header', {
 
 export const MainContent = styled('main', {
   width: '100%',
-  maxWidth: '94vw)',
+  maxWidth: '94vw',
   margin: '4rem auto',
   background: '$gray650',
-  padding: '4rem 0',
+  padding: '4rem 1.5rem',
   borderRadius: '$md',
   display:'flex',
   flexDirection: 'column',
-  gap: '4rem'
+  gap: '4rem',
+
+  "@media (max-width: 800px)": {
+      maxWidth: '100vw',
+      borderRadius: 0,
+  }
 })
 
 export const Hero = styled('div', {
   display: 'grid',
   gridTemplateColumns: '200px 1fr',
   width: '100%',
+
+  "@media (max-width: 800px)": {
+    gridTemplateColumns: '1fr',
+  }
 })
 
 export const Datails = styled('div', {
@@ -85,6 +94,10 @@ export const Datails = styled('div', {
         color: '$green700'
       }
     }
+  },
+
+  "@media (max-width: 800px)": {
+    gridColumnStart: '1',
   }
 })
 
@@ -230,6 +243,10 @@ export const GradientTecnologs = styled('div', {
   display: 'grid',
   gridTemplateColumns: 'repeat(4, 1fr)',
   gap: '$5',
+
+  "@media (max-width: 800px)": {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+  }
 })
 
 export const TextError = styled('p', {

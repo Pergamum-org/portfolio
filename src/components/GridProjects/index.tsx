@@ -27,7 +27,9 @@ export function GridProjects(){
                 <SiMysql size={28} weight='bold' />
                 <RxStitchesLogo size={28} weight='bold' />                
               </span>
-              <Image src={agenda} width={470} height={290} alt='projeto de agendamento de horarios em volta de afazeres principais'/>
+              <div>
+                <Image src={agenda} alt='projeto de agendamento de horarios em volta de afazeres principais'/>
+              </div>
             </div>
             <div>
               <span>
@@ -37,7 +39,9 @@ export function GridProjects(){
                 <IoLogoJavascript size={28} weight='bold' />
                 <BiLogoPostgresql size={28} weight='bold' />
               </span>
-              <Image src={crud} width={470} height={290} alt='Crud de aplicação para usuarios'/>
+              <div>
+                <Image src={crud} alt='Crud de aplicação para usuarios'/>
+              </div>
             </div>
             <div>
             <span>
@@ -48,7 +52,9 @@ export function GridProjects(){
                 <TbSql size={28} weight='bold' />
                 <FaPhp size={28} weight='bold' />
               </span>
-              <Image src={loginVendedor} width={470} height={290} alt='projeto de simulação de cadastro e venda de produtos'/>
+              <div>
+                <Image src={loginVendedor} alt='projeto de simulação de cadastro e venda de produtos'/>
+              </div>
             </div>
             <div>
             <span>
@@ -59,7 +65,9 @@ export function GridProjects(){
                 <TbSql size={28} weight='bold' />
                 <RxStitchesLogo size={28} weight='bold' />                
               </span>
-              <Image src={shoppingImage} width={470} height={290} alt='projeto de vendas vinculado ao stripe'/>
+              <div>
+                <Image src={shoppingImage} alt='projeto de vendas vinculado ao stripe'/>
+              </div>
             </div>
           </Container>
   )

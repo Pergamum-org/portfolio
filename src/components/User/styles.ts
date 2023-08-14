@@ -9,8 +9,10 @@ export const Container = styled('div', {
 })
 
 export const AvatarRoot = styled(Avatar.Root, {
-  width: 200,
-  height: 200,
+  maxWidth: 200,
+  width: '100%',
+  maxHeight: 200,
+  height: '100%',
   borderRadius: 999,
   overflow: 'hidden',
   display: 'inline-flex',
@@ -21,7 +23,7 @@ export const AvatarRoot = styled(Avatar.Root, {
 export const AvatarImage = styled(Avatar.Image, {
   width: '100%',
   height: '100%',
-  objectFit: 'cover',
+  objectFit: 'contain',
   borderRadius: 'inherit',
   transition: 'transform 0.2s',
 

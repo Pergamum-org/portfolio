@@ -8,29 +8,18 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 
 import whatsapp from '../../assets/whatsapp.png'
-import contact from '../../assets/contact.png'
 
 interface ContactProps {
   name: string
-  email?: string
 }
 
 export function Contact(){
-  const [sendMenssage, setSendMessage] = useState<'whatsapp' | 'email'>('whatsapp')
   const { register, handleSubmit } = useForm<ContactProps>()
   const router = useRouter()
 
-  function handleModifyModeSend(send: 'whatsapp' | 'email') {
-    setSendMessage(_ => send)
-  }
-
   async function handleContactUs(data: ContactProps){
-    if(sendMenssage === 'whatsapp'){
       // redirecinar para wtss
       await router.replace(`https://api.whatsapp.com/send?phone=5575988868391&text=Olá, Pérgamo! Me chamo ${data.name}, gostaria de entrar em contato`)
-    } else {
-      // redirecinar para email
-    }
   }
   return(
     <Dialog.Root>
@@ -46,31 +35,21 @@ export function Contact(){
             </Close>
 
             <Navgation>
-              <Title onClick={() => handleModifyModeSend('whatsapp')} select={sendMenssage === 'whatsapp'}>Whatsapp</Title>
-              <Title onClick={() => handleModifyModeSend('email')} select={sendMenssage === 'email'} >E-mail</Title>
+              <Title select>Whatsapp</Title>
             </Navgation>
           </Hero>
 
           <MainContent>
             <div>
-            {sendMenssage == 'whatsapp' ? <Image width={400} src={whatsapp} alt=''/> : <Image width={400} src={contact} alt=''/>}
-              
+              <Image src={whatsapp} alt='logo Whatsapp'/> 
             </div>
             <form onSubmit={handleSubmit(handleContactUs)} >
               <label>
                 Nome:
                 <input required {...register('name')} placeholder='Jone Doe'/>
               </label>
-              {
-                sendMenssage !== 'whatsapp' && (
-                  <label>
-                    E-mail:
-                    <input type='email' required {...register('email')} placeholder='Jonedoe@gmail.com'/>
-                  </label>
-                )
-              }
 
-              <button type='submit'> Entrar em contato {sendMenssage === 'whatsapp'? <WhatsappLogo weight="bold" size={32} /> : <ChatCenteredText size={32} weight="bold" />}  </button>
+              <button type='submit'> Entrar em contato <WhatsappLogo weight="bold" size={32} /></button>
             </form>
           </MainContent>
         </Content>

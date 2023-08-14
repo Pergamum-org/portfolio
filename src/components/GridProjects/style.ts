@@ -12,6 +12,8 @@ export const Container = styled('section', {
       display: 'flex',
       justifyContent: 'center',
       position: 'relative',
+      width: '100%',
+      maxWidth: 470,
 
       span:{
         position: 'absolute',
@@ -21,6 +23,7 @@ export const Container = styled('section', {
         top: 0,
         borderRadius: '$md',
         overflow: 'hidden',
+        zIndex: 999,
 
         svg:{
           background: '$gray100',
@@ -36,7 +39,8 @@ export const Container = styled('section', {
         span:{
           borderRadius: '$md',
           overflow: 'auto',
-          width: 470,
+          width: '100%',
+          maxWidth: 470,
           paddingBottom: '1.5rem',
 
           display: 'flex',
@@ -44,12 +48,20 @@ export const Container = styled('section', {
           alignItems: 'flex-end',
           justifyContent: 'center',
         }
+      },
+
+      div: {
+        width: '100%',
+        maxWidth: 470,
+
+        img: {
+          objectFit: 'contain',
+          borderRadius: '$md',
+          margin: 'auto',
+        },
       }
     },
-
-    img: {
-      objectFit: 'cover',
-      borderRadius: '$md',
-      margin: 'auto',
+    "@media (max-width: 800px)": {
+      gridTemplateColumns: '1fr',
     }
 })

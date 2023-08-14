@@ -4,7 +4,8 @@ import nodemailer from 'nodemailer'
 
 export default async function POST(req: NextApiRequest, res: NextApiResponse){
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'smtp.gmail.com',
+    port: 587,
     auth: {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD,
@@ -22,11 +23,10 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse){
 
   transporter.sendMail(options, (error, info) => {
     if (error) {
-      return res.status(400).end()
+      console.log(error)
+      res.status(400).end()
     } else {
-      return res.status(200).end()
+      res.status(200).end()
     }
   })
-
-  return res.status(200).end()
 }
