@@ -149,6 +149,10 @@ export const Avatars = styled('div', {
   display: 'flex',
   alignItems: 'center',
   gap: '2rem',
+
+  "@media (max-width: 800px)": {
+    gap: "1.3rem",
+  }
 })
 
 export const Progress = styled('div', {
@@ -224,12 +228,19 @@ export const WeWorks = styled('div', {
 
     img: {
       objectFit: 'cover',
-      borderRadius: '$md'
+      borderRadius: '$md',
     },
     
     "@media (max-width: 800px)": {
       flexDirection: 'column',
       gap: "1rem",
+      padding: 0,
+
+      img: {
+        objectFit: 'contain',
+        borderRadius: '$md',
+        width: '100%'
+      },
     }
   }
 })

@@ -91,7 +91,7 @@ export default function Home() {
           <h2>Atuação no mercado</h2>
           <p>Nós temos trabalhos feitos para o mercado jurídico e de estocagem. <span>Trabalhamos com animações 3D no  Virtual Crash 5</span> e em aplicações com interação com banco de dados SQL e NoSQL.</p>
           <div>
-            <Image src={virtualCrash} width={400} alt='Virtual Crash 5, software de simulação de acidentes' />
+            <Image src={virtualCrash} width={374} alt='Virtual Crash 5, software de simulação de acidentes' />
             <Image src={dataBaseSQL} width={314} alt='SQL database' />
           </div>
         </WeWorks>
