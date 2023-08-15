@@ -10,6 +10,12 @@ export const Container = styled('div', {
   gap: '$4',
   border: '1px solid #121214',
   borderRadius: '$md',
+  transition: 'color 0.2s',
+
+  '&:hover': {
+    color: '$green400',
+    scale: 1.05,
+  },
 
   variants: {
     isBlack: {

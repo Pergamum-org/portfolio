@@ -92,7 +92,7 @@ export const Datails = styled('div', {
     alignItems: 'center',
     gap: '$4',
 
-    a:{
+    'a, span':{
       border: '1px solid black',
       width: 64,
       height: 64,
@@ -101,10 +101,12 @@ export const Datails = styled('div', {
       justifyContent: 'center',
       color: '$gray200',
       borderRadius: '999px',
+      cursor: 'pointer',
       transition: 'color 0.2s',
 
-      '&:hover, &:focus':{
-        color: '$green700'
+      '&:hover, &:focus': {
+        color: '$green700',
+        background: '$gray700'
       }
     },
 
@@ -207,6 +209,10 @@ export const WeWorks = styled('div', {
     lineHeight: '$base',
     fontSize: '$md',
     textAlign: 'center',
+
+    span: {
+      color: '$green400'
+    }
   },
 
   div:{
@@ -251,7 +257,7 @@ export const Tecnologes = styled('article', {
   margin: '0 auto',
 
   h2: {
-    color: '$gray200',
+    color: '$green400',
     fontSize: '2.5rem',
   },
 

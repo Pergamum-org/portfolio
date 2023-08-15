@@ -15,7 +15,7 @@ import {
   GradientTecnologs,
   Projects
 } from '@/styles/pages/home'
-import { Airplay, GithubLogo, LinkSimpleHorizontal, TwitterLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { Airplay, GithubLogo, LinkSimpleHorizontal, TwitterLogo, InstagramLogo } from '@phosphor-icons/react'
 import Link from 'next/link'
 import { User } from '@/components/User'
 import Image from 'next/image'
@@ -32,6 +32,12 @@ import { getUsers } from '@/utils/getUsers'
 export default function Home() {
   const users = getUsers()
   const tecs = getTecs()
+
+  const copyURL = () => {
+    const currentURL = window.location.href
+    navigator.clipboard.writeText(currentURL)
+  }
+
   return (
     <Container>
       <Header>
@@ -56,10 +62,10 @@ export default function Home() {
                 </Avatars>
               </InforOwners>
               <nav>
-                <Link href='https://github.com' target='_blank'><LinkSimpleHorizontal size={32} weight="bold" /></Link>
-                <Link href='https://github.com' target='_blank'><TwitterLogo size={32} weight="bold" /></Link>
-                <Link href='https://github.com' target='_blank'><LinkedinLogo size={32} weight="bold" /></Link>
-                <Link href='https://github.com' target='_blank'><GithubLogo size={32} weight="bold" /></Link>
+                <span onClick={() => copyURL()}><LinkSimpleHorizontal size={32} weight="bold" /></span>
+                <Link href='https://twitter.com/Pergamo_org?t=iExYofRl1lBqb_HusRFhUg&s=08' target='_blank'><TwitterLogo size={32} weight="bold" /></Link>
+                <Link href='https://www.instagram.com/pergamo_org/?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D' target='_blank'><InstagramLogo size={32} weight="bold" /></Link>
+                <Link href='https://github.com/Pergamum-org' target='_blank'><GithubLogo size={32} weight="bold" /></Link>
               </nav>
             </section>
           </Datails>
@@ -70,9 +76,9 @@ export default function Home() {
         <AboutMe>
           <h2>Pérgamo</h2>
           <p>
-            Somos uma empresa focada em criar e disponibilizar sistemas interativos com foco no usuário e funcionalidades. Nascemos como um complemento entre amigos e sócios para
+            Somos uma empresa focada em criar e disponibilizar sistemas interativos com foco no usuário e nas funcionalidades. Nascemos como um complemento entre amigos e sócios para
             proporcionar uma gama de conhecimentos amplos e uma estrutura sólida para o
-            desenvolvimento. <span>clique para saber mais sobre nós.</span>
+            desenvolvimento.
           </p>
           <p>
             Nós da Pérgamo estamos voltados para aplicações com as mais diversas tecnologias que foquem no desempenho e funcionalidade buscada. A transparência do serviço, qualidade e a ética são nossos principais pilares.
@@ -83,7 +89,7 @@ export default function Home() {
         </AboutMe>
         <WeWorks>
           <h2>Atuação no mercado</h2>
-          <p>Nós temos trabalhos feitos para o mercado jurídico e de estocagem. Trabalhamos animações 3D com Virtual Crash 5 e em aplicações com interação com banco de dados SQL e NoSQL.</p>
+          <p>Nós temos trabalhos feitos para o mercado jurídico e de estocagem. <span>Trabalhamos com animações 3D no  Virtual Crash 5</span> e em aplicações com interação com banco de dados SQL e NoSQL.</p>
           <div>
             <Image src={virtualCrash} width={400} alt='Virtual Crash 5, software de simulação de acidentes' />
             <Image src={dataBaseSQL} width={314} alt='SQL database' />

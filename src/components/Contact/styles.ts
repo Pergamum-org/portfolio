@@ -23,7 +23,13 @@ export const Trigger  = styled(Dialog.Trigger, {
     '&:not(:disabled):hover, &:not(:disabled):focus':{
       border: '1px solid $gray300',
       background: '$gray950',
-    }
+    },
+
+  "@media (max-width: 800px)": {
+    gap: '$1',
+    padding: '$2',
+    marginLeft: '1.5rem'
+  }
 })
 
 export const Overlay  = styled(Dialog.Overlay, {
@@ -33,7 +39,7 @@ export const Overlay  = styled(Dialog.Overlay, {
 })
 
 export const Content  = styled(Dialog.Content, {
-  position: 'absolute',
+  position: 'fixed',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',

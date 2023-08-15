@@ -18,8 +18,11 @@ export const stylesGlobalCss = globalCss({
     fontSize: '1rem',
     color: '$gray200',
 
-    "@media (max-width: 800px)": {
+    "@media (max-width: 1000px)": {
       fontSize: '86.75%',
+    },
+    "@media (max-width: 750px)": {
+      fontSize: '75%',
     }
   },
 })
