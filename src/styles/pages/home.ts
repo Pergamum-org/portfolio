@@ -90,7 +90,7 @@ export const Datails = styled('div', {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '$4',
+    gap: '$3',
 
     'a, span':{
       border: '1px solid black',

@@ -47,4 +47,8 @@ export const UserName = styled('h2',{
   fontSize: '2rem',
   color: '$green300',
   fontStyle: 'italic',
+
+  "@media (max-width: 500px)": {
+    fontSize: "1.5rem",
+  }
 })
